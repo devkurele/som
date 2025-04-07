@@ -1,4 +1,4 @@
-# dev
+
 # include <stdio.h>
 # include "dev.h" 
 int main() {
@@ -54,3 +54,4 @@ int reverse(int num) {
     
     return 0;
 }
+#efrgh
