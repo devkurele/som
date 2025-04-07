@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/devgupta/Documents/untitled folder/c/dev",
+      "program": "/Users/devgupta/Documents/untitled folder/c/dev/build/Debug/outDebug"
+    }
+  ]
+}
