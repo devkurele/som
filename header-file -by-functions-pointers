@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "array_utils.h"
+
+int main() {
+    int size;
+    printf("Enter size of the array: ");
+    scanf("%d", &size);
+
+    int* arr = (int*)malloc(size * sizeof(int));
+    if (arr == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
+
+    printf("Enter %d elements:\n", size);
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Using function pointers
+    operation_ptr op_max = find_max;
+    operation_ptr op_sum = array_sum;
+    void_operation_ptr op_reverse = reverse_array;
+
+    printf("Max element: %d\n", op_max(arr, size));
+    printf("Sum of elements: %d\n", op_sum(arr, size));
+
+    op_reverse(arr, size);
+    printf("Reversed array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    free(arr);
+    return 0;
+}
